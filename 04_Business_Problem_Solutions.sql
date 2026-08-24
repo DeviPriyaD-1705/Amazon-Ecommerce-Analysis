@@ -1,5 +1,5 @@
 -- =========================================
--- BUSINESS PROBLEMS SOLUTIONS
+-- BUSINESS PROBLEMS SOLUTIONS 
 -- =========================================
 
 /*
@@ -48,12 +48,12 @@ and what percentage of the overall revenue comes from each category.
 */
 
 SELECT 
-	   p.category_id,
+	 p.category_id,
      c.category_name, 
      ROUND(SUM(oi.total_sales),2) as total_sales,
-	   ROUND(SUM(oi.total_sales) / 
+	 ROUND(SUM(oi.total_sales) / 
             (
-			       SELECT SUM(total_sales) 
+			 SELECT SUM(total_sales) 
              FROM order_items) * 100,2
             ) as percentage_contribution_by_each_category
 FROM order_items as oi
@@ -62,7 +62,7 @@ JOIN products as p
 JOIN category as c
 	ON p.category_id = c.category_id
 GROUP BY 
-	   p.category_id,
+	 p.category_id,
      c.category_name
 ORDER BY total_sales desc;
 
@@ -205,7 +205,7 @@ Include customer, order details, and delivery provider.
 */
 
 SELECT 
-	  o.order_id,
+    o.order_id,
     CONCAT(c.first_name, ' ', c.last_name) AS customer_name,
     o.order_date,
     s.shipping_date,
@@ -274,14 +274,14 @@ Display the return rate as a percentage of total units sold for each product.
 
 SELECT
      p.product_id,
-	   p.product_name,
+	 p.product_name,
      COUNT(*) as total_orders,
      SUM(CASE
             WHEN o.order_status = 'Returned'
             THEN oi.quantity
             ELSE 0
         END) as returned_units,
-	   SUM(oi.quantity) as total_units_sold,
+	 SUM(oi.quantity) as total_units_sold,
      ROUND(SUM(CASE
                 WHEN o.order_status = 'Returned'
                 THEN oi.quantity
@@ -406,7 +406,7 @@ seller_order_status as
 )
 
 SELECT 
-	  seller_id,
+	seller_id,
     seller_name,
     SUM(total_orders) as total_orders,
     SUM(CASE 
