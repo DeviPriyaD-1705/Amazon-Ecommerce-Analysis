@@ -27,14 +27,12 @@ FROM category;
 
 
 -- Returned orders
-SELECT * FROM shipping;
 SELECT * 
 FROM shipping
 WHERE return_date is not null;
 
 
 -- Check order date range
-SELECT * FROM orders;
 SELECT
 	 min(order_date) as first_order_date,
      max(order_date) as last_order_date
