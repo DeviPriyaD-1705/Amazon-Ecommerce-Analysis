@@ -38,18 +38,19 @@ The tables contain information related to sales transactions, customers, product
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Data Exploration & Analysis
+
 Before performing the business analysis, exploratory data analysis (EDA) was performed to understand the structure, contents, and time range of the dataset.
 
 The EDA included:
 
--Reviewing the data across the major tables
--Exploring order, payment, shipping, product, customer, inventory, and seller data
--Checking distinct order statuses
--Checking distinct payment statuses
--Checking distinct delivery statuses
--Checking available product categories
--Identifying returned orders using the return date
--Checking the first and last order dates to understand the available sales period
+- Reviewing the data across the major tables
+- Exploring order, payment, shipping, product, customer, inventory, and seller data
+- Checking distinct order statuses
+- Checking distinct payment statuses
+- Checking distinct delivery statuses
+- Checking available product categories
+- Identifying returned orders using the return date
+- Checking the first and last order dates to understand the available sales period
 
 This initial exploration helped in understanding the dataset and preparing it for further SQL-based business analysis.
 
