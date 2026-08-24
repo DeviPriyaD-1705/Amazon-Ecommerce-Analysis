@@ -17,11 +17,11 @@ Note: The dataset used in this project is training-purpose data and is not actua
 The primary objective of this project is to demonstrate SQL proficiency by analyzing Amazon sales data and solving real-world business problems.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# ** SQL Concepts Used **
+# SQL Concepts Used
 Joins , case statements ,  Group By , Having , Subqueries , window functions - Rank , Dense Rank , Lag , CTE's
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# ** Key Insights **
+# Key Insights
 Sales Performance : Analyzed overall sales performance to understand revenue generation and identify important sales patterns.
 Product Performance : Identified products contributing significantly to sales and evaluated product-level performance.
 Category Performance : Compared different product categories to determine which categories generate higher sales and revenue.
