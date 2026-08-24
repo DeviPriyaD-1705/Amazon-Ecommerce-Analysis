@@ -37,41 +37,33 @@ The tables contain information related to sales transactions, customers, product
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Data Exploration & Analysis
-Before performing the business analysis, exploratory data analysis was performed to understand the structure and quality of the dataset.
-The exploration included:
+Before performing the business analysis, exploratory data analysis (EDA) was performed to understand the structure, contents, and time range of the dataset.
 
-- Checking the number of rows and columns
-- Understanding column names and data types
-- Identifying missing values
-- Identifying duplicate records
-- Checking unique values
-- Understanding categorical variables
-- Checking numerical columns
-- Examining minimum and maximum values
-- Understanding sales and quantity distributions
-- Identifying potential data quality issues
-- Understanding relationships between important columns
+The EDA included:
 
-This helped ensure that the dataset was properly understood before performing the SQL analysis.
+-Reviewing the data across the major tables
+-Exploring order, payment, shipping, product, customer, inventory, and seller data
+-Checking distinct order statuses
+-Checking distinct payment statuses
+-Checking distinct delivery statuses
+-Checking available product categories
+-Identifying returned orders using the return date
+-Checking the first and last order dates to understand the available sales period
+
+This initial exploration helped in understanding the dataset and preparing it for further SQL-based business analysis.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Task: Data Cleaning
-I cleaned the dataset by:
+## Data Cleaning
 
--Removing duplicates: Duplicates in the customer and order tables were identified and removed.
--Handling missing values: Null values in critical fields (e.g., customer address, payment status) were either filled with default values or handled using appropriate methods.
+Data quality was reviewed before performing the business analysis.
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Handling NULL Values
-Null values were handled based on their context:
+The cleaning process included:
 
-NULL values were examined based on the context of the data.
-Different approaches were considered depending on the column and business requirement.
-
--Missing Values: Checked for missing customer, product, sales, date, categorical, and numerical information.
--Shipping information: Null return dates were left as is, as not all shipments are returned.
-
-NULL values were either retained, excluded, or handled appropriately depending on their impact on the analysis.
+- Checking for duplicate records
+- Checking for missing (NULL) values
+- Reviewing categorical values for consistency
+- Validating date and numerical fields
+- Handling data quality issues where required
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Business Analysis
